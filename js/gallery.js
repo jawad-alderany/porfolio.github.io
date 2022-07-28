@@ -163,8 +163,10 @@ function setTitlePage() {
 
 function setAlbum() {
     console.log(location.href);
-    var page = location.href.split('/');
-    var album = page[page.length - 1].split('?')[1].split('=')[1];
+    //var page = location.href.split('/');
+    //var album = page[page.length - 1].split('?')[1].split('=')[1];
+    document.getElementById("title").innerHTML = location.href;
+    var album = "sterilizationunit";
 
     switch (album) {
         case 'propertymanagement':
