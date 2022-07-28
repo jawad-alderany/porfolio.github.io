@@ -12,6 +12,13 @@ var pageShift = 500;
 var transitionPrefix = "circle";
 var svg = true;
 
+document.getElementsByClassName("close_btn")[0].addEventListener("click", function () {
+    if (history.length >= 1)
+        history.back();
+    else
+        location.href = "../index.html";
+});
+
 setAlbum();
 
 
@@ -160,30 +167,29 @@ function setTitlePage() {
 
 function setAlbum() {
 
-    //try {
-    //    var page = location.href.split('/');
-    //    var album = page[page.length - 1].split('?')[1].split('=')[1];
+    try {
+        var page = location.href.split('/');
+        var album = page[page.length - 1].split('?')[1].split('=')[1];
 
-    //} catch (e) {
-    //    location.href = '../index.html';
-    //}
-    var album = "sterilizationunit";
+    } catch (e) {
+        location.href = '../index.html';
+    }
 
     switch (album) {
         case 'propertymanagement':
-            fileName = 'img/propertymanagement_';
+            fileName = '../img/propertymanagement_';
             pagesNum = 32;
             srcWidth = 1366;
             srcHeight = 665;
             break;
         case 'sterilizationunit':
-            fileName = 'img/sterilizationunit_';
+            fileName = '../img/sterilizationunit_';
             pagesNum = 20;
             srcWidth = 706;
             srcHeight = 448;
             break;
         case 'tenancyagreements':
-            fileName = 'img/tenancyagreements_';
+            fileName = '../img/tenancyagreements_';
             pagesNum = 16;
             srcWidth = 1366;
             srcHeight = 768;
@@ -239,7 +245,7 @@ function setImages() {
 
         //or create image elemetnt
         const image = document.createElement('img');
-        image.setAttribute('src', fileName + '' + i + '.png');
+        image.setAttribute('src', fileName + '' + i + '.webp');
         image.classList.add("center");
         slide.appendChild(image);
 
