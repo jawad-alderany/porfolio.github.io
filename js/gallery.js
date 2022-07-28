@@ -13,10 +13,7 @@ var transitionPrefix = "circle";
 var svg = true;
 
 setAlbum();
-setSvgSize();
-setImages();
-setCountPage();
-setTitlePage();
+
 
 function leftSlide() {
     if (click) {
@@ -162,27 +159,31 @@ function setTitlePage() {
 //
 
 function setAlbum() {
-    console.log(location.href);
-    //var page = location.href.split('/');
-    //var album = page[page.length - 1].split('?')[1].split('=')[1];
-    //document.getElementById("title").innerHTML = location.href;
+
+    //try {
+    //    var page = location.href.split('/');
+    //    var album = page[page.length - 1].split('?')[1].split('=')[1];
+
+    //} catch (e) {
+    //    location.href = '../index.html';
+    //}
     var album = "sterilizationunit";
 
     switch (album) {
         case 'propertymanagement':
-            fileName = '../img/propertymanagement_';
+            fileName = 'img/propertymanagement_';
             pagesNum = 32;
             srcWidth = 1366;
             srcHeight = 665;
             break;
         case 'sterilizationunit':
-            fileName = '../img/sterilizationunit_';
+            fileName = 'img/sterilizationunit_';
             pagesNum = 20;
             srcWidth = 706;
             srcHeight = 448;
             break;
         case 'tenancyagreements':
-            fileName = '../img/tenancyagreements_';
+            fileName = 'img/tenancyagreements_';
             pagesNum = 16;
             srcWidth = 1366;
             srcHeight = 768;
@@ -213,6 +214,11 @@ function setAlbum() {
             location.href = '../index.html';
             break;
     }
+
+    setSvgSize();
+    setImages();
+    setCountPage();
+    setTitlePage();
 }
 
 function setImages() {
@@ -233,7 +239,7 @@ function setImages() {
 
         //or create image elemetnt
         const image = document.createElement('img');
-        image.setAttribute('src', fileName+  '' + i + '.png');
+        image.setAttribute('src', fileName + '' + i + '.png');
         image.classList.add("center");
         slide.appendChild(image);
 
