@@ -178,9 +178,10 @@ function setAlbum() {
     switch (album) {
         case 'propertymanagement':
             fileName = '../img/propertymanagement_';
-            pagesNum = 32;
+            pagesNum = 51;
             srcWidth = 1366;
-            srcHeight = 665;
+            srcHeight = 649;
+            document.getElementsByClassName("counter")[0].style.color = "#757575";
             break;
         case 'sterilizationunit':
             fileName = '../img/sterilizationunit_';
@@ -205,11 +206,13 @@ function setAlbum() {
             pagesNum = 6;
             srcWidth = 890;
             srcHeight = 542;
+            document.getElementsByClassName("counter")[0].style.color = "#757575";
             break;
         case 'sukna':
-            //fileName = '../img/sukna/_';
-            //imageNum = 0;
-            location.href = '../index.html';
+            fileName = '../img/sukna_';
+            pagesNum = 23;
+            srcWidth = 1366;
+            srcHeight = 2246;
             break;
         case 'marketing':
             //fileName = '../img/marketing/_';
@@ -273,7 +276,7 @@ function setSvgSize() {
 
     //set radius and position for circales
     var space = parent.offsetWidth / 8;
-    var radius = 10;
+    var radius = 35;
     var svg1cCircles = [].slice.call(svg1.children);
     var svg2cCircles = [].slice.call(svg2.children);
 

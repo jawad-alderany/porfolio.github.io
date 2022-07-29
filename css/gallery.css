@@ -80,10 +80,10 @@ circle {
 }
 
 .right {
-    margin-left: 628px;
+    /*    margin-left: 628px;*/
     margin-top: 298px;
     margin-left: 23.5%;
-    margin-top: 7.22%;
+    /* margin-top: 7.22%; the percentage will change when the image height change*/
     border: 1px solid #849494;
     background-color: transparent;
     transition: 0.5s;
@@ -96,7 +96,7 @@ circle {
 .left {
     margin-left: 0.5%;
     margin-top: 298px;
-   /* margin-top: 7.22%;*/
+    /* margin-top: 7.22%;*/
     border: 1px solid #849494;
     background-color: transparent;
     transition: 0.5s;
@@ -141,6 +141,7 @@ circle {
 .circle9 {
     transition-delay: 0.45s;
 }
+
 
 .circle10 {
     transition-delay: 0.05s;
@@ -276,11 +277,11 @@ circle {
 
 .streak {
     /*stroke-width: 82px;*/
-    stroke-width: 17%;
+    stroke-width: 30%;
 }
 
 .center {
-    height: 100%;
+    height: auto;
     max-height: 100%;
     max-width: 100%;
     margin: 0;
