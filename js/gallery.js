@@ -245,7 +245,7 @@ function setImages() {
 
         //or create image elemetnt
         const image = document.createElement('img');
-        image.setAttribute('src', fileName + '' + i + '.webp');
+        image.setAttribute('src', fileName + '' + i + '.jpg');
         image.classList.add("center");
         slide.appendChild(image);
 
