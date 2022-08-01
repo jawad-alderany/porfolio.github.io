@@ -186,8 +186,8 @@ function setAlbum() {
         case 'sterilizationunit':
             fileName = '../img/sterilizationunit_';
             pagesNum = 20;
-            srcWidth = 706;
-            srcHeight = 448;
+            srcWidth = 709;
+            srcHeight = 447;
             break;
         case 'tenancyagreements':
             fileName = '../img/tenancyagreements_';
@@ -218,6 +218,12 @@ function setAlbum() {
             //fileName = '../img/marketing/_';
             //imageNum = 0;
             location.href = '../index.html';
+            break;
+        case 'housingmanagement':
+            fileName = '../img/housingmanagement_';
+            pagesNum = 25;
+            srcWidth = 1366;
+            srcHeight = 649;
             break;
         default:
             location.href = '../index.html';
