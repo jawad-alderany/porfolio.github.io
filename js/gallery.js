@@ -225,6 +225,24 @@ function setAlbum() {
             srcWidth = 1366;
             srcHeight = 649;
             break;
+        case 'studentmanagement':
+            fileName = '../img/studentmanagement_';
+            pagesNum = 6;
+            srcWidth = 1366;
+            srcHeight = 649;
+            break;
+        case 'employeemanagement':
+            fileName = '../img/employeemanagement_';
+            pagesNum = 5;
+            srcWidth = 1366;
+            srcHeight = 649;
+            break;
+        case 'account':
+            fileName = '../img/account_';
+            pagesNum = 4;
+            srcWidth = 1080;
+            srcHeight = 2400;
+            break;
         default:
             location.href = '../index.html';
             break;
@@ -299,3 +317,30 @@ function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
 
     return { width: srcWidth * ratio, height: srcHeight * ratio };
 }
+
+//--------------------------------------- Events ---------------------------------//
+// Function to handle resizing and adjust margin-left
+function handleResize() {
+    var parentElement = document.querySelector('.parent');
+    var rightElement = document.querySelector('.right');
+
+    if (parentElement && rightElement) {
+        var parentWidth = parentElement.offsetWidth;
+
+        if (parentWidth <= 150) {
+            rightElement.style.marginLeft = '19%';
+        } else if (parentWidth <= 400) {
+            rightElement.style.marginLeft = '21.5%';
+        } else if (parentWidth <= 1000) {
+            rightElement.style.marginLeft = '23.5%';
+        } else {
+            rightElement.style.marginLeft = '23.5%';
+        }
+    }
+}
+
+// Initial adjustment on page load
+handleResize();
+
+// Add event listener for window resize
+window.addEventListener('resize', handleResize);
