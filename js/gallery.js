@@ -175,6 +175,7 @@ function setAlbum() {
         location.href = '../index.html';
     }
 
+    var sliderBackground = "black";
     switch (album) {
         case 'propertymanagement':
             fileName = '../img/propertymanagement_';
@@ -243,18 +244,26 @@ function setAlbum() {
             srcWidth = 1080;
             srcHeight = 2400;
             break;
+        case 'sls':
+            fileName = '../img/sls_';
+            pagesNum = 17;
+            srcWidth = 1482;
+            srcHeight = 743;
+            document.getElementsByClassName("counter")[0].style.color = "#FAFAFA";
+            sliderBackground = "#757575";
+            break;
         default:
             location.href = '../index.html';
             break;
     }
 
     setSvgSize();
-    setImages();
+    setImages(sliderBackground);
     setCountPage();
     setTitlePage();
 }
 
-function setImages() {
+function setImages(sliderBackground) {
 
     for (var i = 1; i <= pagesNum; i++) {
         //create and add slide 'i'
@@ -262,6 +271,7 @@ function setImages() {
         slide.id = "slide" + i;
         slide.classList.add("slide-c");
         slide.classList.add("slide" + i);
+        slide.style.background = sliderBackground;
         if (i == 1)
             slide.classList.add("up1");
 
