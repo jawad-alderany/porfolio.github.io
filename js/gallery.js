@@ -252,6 +252,14 @@ function setAlbum() {
             document.getElementsByClassName("counter")[0].style.color = "#FAFAFA";
             sliderBackground = "#757575";
             break;
+        case 'tasky':
+            fileName = '../img/Tasky_';
+            pagesNum = 14;
+            srcWidth = 1366;
+            srcHeight = 633;
+            document.getElementsByClassName("counter")[0].style.color = "#757575";
+            //sliderBackground = "#757575";
+            break;
         default:
             location.href = '../index.html';
             break;
