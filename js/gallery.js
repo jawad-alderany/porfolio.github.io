@@ -260,6 +260,14 @@ function setAlbum() {
             document.getElementsByClassName("counter")[0].style.color = "#757575";
             //sliderBackground = "#757575";
             break;
+        case 'hr':
+            fileName = '../img/hr_';
+            pagesNum = 26;
+            srcWidth = 1920;
+            srcHeight = 1000;
+            document.getElementsByClassName("counter")[0].style.color = "#757575";
+            //sliderBackground = "#757575";
+            break;
         default:
             location.href = '../index.html';
             break;
